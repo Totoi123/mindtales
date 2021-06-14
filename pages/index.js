@@ -1,7 +1,10 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import AuthContext from "../stores/authContext";
 
 const HomePage = () => {
+  const { user, login } = useContext(AuthContext);
   return (
     <>
       <Head>
@@ -21,14 +24,17 @@ const HomePage = () => {
                 ipsam quas consequatur beatae, voluptatem libero ab? Alias
                 maiores voluptates hic nesciunt!
               </p>
-              <motion.button
-                initial={{ x: -500 }}
-                animate={{ x: 0 }}
-                transition={{ duration: 1.5, type: "spring", stiffness: 150 }}
-                className="button is-rounded is-primary is-size-5 title mt-2"
-              >
-                Get Started
-              </motion.button>
+              {!user && (
+                <motion.button
+                  initial={{ x: -500 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 1.5, type: "spring", stiffness: 150 }}
+                  className="button is-rounded is-primary is-size-5 title mt-2"
+                  onClick={login}
+                >
+                  Get Started
+                </motion.button>
+              )}
             </div>
             <div className="column is-5">
               <motion.img
