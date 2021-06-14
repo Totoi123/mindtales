@@ -1,8 +1,10 @@
 import Head from "next/head";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import AuthContext from "../stores/authContext";
+import { db } from "../firebase";
+import firebase from "firebase";
 
 const HomePage = () => {
   const { user, login } = useContext(AuthContext);
