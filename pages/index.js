@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import AuthContext from "../stores/authContext";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const HomePage = () => {
   const { user, login } = useContext(AuthContext);
@@ -33,9 +31,7 @@ const HomePage = () => {
       setMessage("");
     }
   };
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
+
   return (
     <>
       <Head>
@@ -95,7 +91,7 @@ const HomePage = () => {
               >
                 Mindtales
               </p>
-              <p data-aos="fade-up" className="is-size-4 has-text-justified">
+              <p className="is-size-4 has-text-justified">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Laborum deleniti sed enim praesentium, mollitia aut nihil modi,
                 dolor commodi cumque voluptatum. Illo quia itaque fuga. Rerum ex
@@ -112,16 +108,10 @@ const HomePage = () => {
           <div className="container">
             <div className="columns is-vcentered is-8">
               <div className="column is-7">
-                <p
-                  data-aos="fade-right"
-                  className="is-size-2 has-text-grey-dark title"
-                >
+                <p className="is-size-2 has-text-grey-dark title">
                   Enhance Your creativity
                 </p>
-                <p
-                  data-aos="fade-right"
-                  className="is-size-4 has-text-justified"
-                >
+                <p className="is-size-4 has-text-justified">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Consectetur iure nisi recusandae sed necessitatibus amet!
                   <br />
@@ -132,11 +122,7 @@ const HomePage = () => {
                 </p>
               </div>
               <div className="column is-5 ml-5">
-                <img
-                  data-aos="fade-left"
-                  src="/creativity.svg"
-                  alt="creativity"
-                />
+                <img src="/creativity.svg" alt="creativity" />
               </div>
             </div>
           </div>
@@ -146,16 +132,13 @@ const HomePage = () => {
         <div className="container">
           <div className="columns is-vcentered">
             <div className="column is-6 ml-5">
-              <img data-aos="zoom-in" src="/light.svg" alt="light" />
+              <img src="/light.svg" alt="light" />
             </div>
             <div className="column">
-              <p
-                data-aos="fade-left"
-                className="is-size-2 has-text-grey-dark title"
-              >
+              <p className="is-size-2 has-text-grey-dark title">
                 Light, Fast & Responsive
               </p>
-              <p data-aos="fade-up" className="is-size-4 has-text-justified">
+              <p className="is-size-4 has-text-justified">
                 Mindtales is ready to use with fast and responsive UI. Get the
                 new blogging experience <br /> <br /> Lorem ipsum dolor sit amet
                 consectetur adipisicing elit. Quibusdam possimus consequatur
@@ -169,25 +152,17 @@ const HomePage = () => {
         <div className="container">
           <div className="columns is-vcentered">
             <div className="column ">
-              <p
-                data-aos="fade-right"
-                className="is-size-2 has-text-grey-dark title"
-              >
+              <p className="is-size-2 has-text-grey-dark title">
                 That's about it
               </p>
-              <p data-aos="fade-right" className="is-size-4 has-text-justified">
+              <p className="is-size-4 has-text-justified">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
                 illum consequatur quae sit animi eos, quibusdam vero, distinctio
                 dolore odit totam aliquid natus voluptatibus quia.
               </p>
             </div>
             <div className="column">
-              <img
-                data-aos="fade-left"
-                className="image img"
-                src="/sitting.svg"
-                alt="sitting"
-              />
+              <img className="image img" src="/sitting.svg" alt="sitting" />
             </div>
           </div>
           <hr />
@@ -198,16 +173,10 @@ const HomePage = () => {
         <div className="container ">
           <div className="columns ">
             <div className="column">
-              <h1
-                data-aos="fade-up"
-                className="is-size-1 title has-text-centered"
-              >
+              <h1 className="is-size-1 title has-text-centered">
                 Customer Testimonials
               </h1>
-              <p
-                data-aos="fade-up"
-                className="is-size-4 has-text-grey has-text-centered move"
-              >
+              <p className="is-size-4 has-text-grey has-text-centered move">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia,
                 vero magni? Doloremque, facere corrupti. Deleniti dolores a est
                 quia dolor.
@@ -219,7 +188,7 @@ const HomePage = () => {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <div data-aos="fade-up" className="card">
+              <div className="card">
                 <div className="card-content">
                   <p className="is-size-1 title has-text-link">"</p>
                   <p className="is-size-4 has-text-grey-dark has-text-justified">
@@ -239,7 +208,7 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              <div data-aos="fade-up" className="card">
+              <div className="card">
                 <div className="card-content">
                   <p className="is-size-1 title has-text-link">"</p>
                   <p className="is-size-4 has-text-grey-dark has-text-justified">
@@ -259,7 +228,7 @@ const HomePage = () => {
             </div>
 
             <div className="column">
-              <div data-aos="fade-up" className="card">
+              <div className="card">
                 <div className="card-content">
                   <p className="is-size-1 title has-text-link">"</p>
                   <p className="is-size-4 has-text-grey-dark has-text-justified">
@@ -284,10 +253,8 @@ const HomePage = () => {
         <div className="container">
           <div className="columns is-vcentered">
             <div className="column ">
-              <p data-aos="fade-right" className="is-size-2 has-text-grey-dark">
-                Contact Form
-              </p>
-              <p data-aos="fade-right" className="is-size-4 has-text-justified">
+              <p className="is-size-2 has-text-grey-dark">Contact Form</p>
+              <p className="is-size-4 has-text-justified">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Blanditiis illum sit dolore explicabo, ullam atque Lorem ipsum
                 dolor sit, amet consectetur adipisicing elit. Ea, minus. <br />
@@ -298,7 +265,7 @@ const HomePage = () => {
             </div>
 
             <div className="column ml-5">
-              <form data-aos="fade-left" onSubmit={hanldeContactFormSubmit}>
+              <form onSubmit={hanldeContactFormSubmit}>
                 <div className="field">
                   <label className="label is-size-5">Name</label>
                   <div className="control">
