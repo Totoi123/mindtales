@@ -1,8 +1,12 @@
 import Link from "next/link";
+import { useContext } from "react";
+import AuthContext from "../stores/authContext";
 
 const Navbar = () => {
+  const { user, login, logout } = useContext(AuthContext);
+  console.log(user);
   return (
-    <nav className="navbar p-4">
+    <nav className=" container navbar p-4">
       <div className="navbar-header">
         <div className="navbar-brand">
           <h1 className="is-size-1 title has-text-darkgrey">Mindtales</h1>
@@ -22,14 +26,20 @@ const Navbar = () => {
             <a className="navbar-item is-size-4">Contact</a>
           </Link>
 
-          <div class="navbar-item">
-            <div class="buttons">
-              <p class="button is-link is-outlined is-rounded">
+          <div className="navbar-item">
+            <div className="buttons">
+              <p
+                onClick={login}
+                className="button is-link is-outlined is-rounded"
+              >
                 <strong>Login/Signup</strong>
               </p>
-              <a class="button is-danger is-outlined is-rounded">
+              <p
+                onClick={logout}
+                className="button is-danger is-outlined is-rounded"
+              >
                 <strong>Logout</strong>
-              </a>
+              </p>
             </div>
           </div>
         </div>

@@ -1,11 +1,13 @@
-import Layout from "../components/Layout";
+import { AuthContextProvider } from "../stores/authContext";
 import "../styles/globals.css";
+import Navbar from "../components/Navbar";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
+    <AuthContextProvider>
+      <Navbar />
       <Component {...pageProps} />
-    </Layout>
+    </AuthContextProvider>
   );
 }
 
