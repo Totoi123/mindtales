@@ -3,8 +3,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import AuthContext from "../stores/authContext";
-import { db } from "../firebase";
-import firebase from "firebase";
+// import { db } from "../firebase";
+// import firebase from "firebase";
 
 const HomePage = () => {
   const { user, login } = useContext(AuthContext);
@@ -18,20 +18,20 @@ const HomePage = () => {
 
     setLoading(true);
 
-    const response = await db.collection("messages").add({
-      name,
-      email,
-      message,
-      submittedAt: firebase.firestore.FieldValue.serverTimestamp(),
-    });
+    // const response = await db.collection("messages").add({
+    //   name,
+    //   email,
+    //   message,
+    //   submittedAt: firebase.firestore.FieldValue.serverTimestamp(),
+    // });
 
-    if (response) {
-      console.log(response);
-      setLoading(false);
-      setName("");
-      setEmail("");
-      setMessage("");
-    }
+    // if (response) {
+    //   console.log(response);
+    //   setLoading(false);
+    //   setName("");
+    //   setEmail("");
+    //   setMessage("");
+    // }
   };
 
   return (
