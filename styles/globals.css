@@ -1,1 +1,6 @@
 @import "bulma/css/bulma.css";
+
+.notfoundimage {
+  width: 500px;
+  height: 400px;
+}
